@@ -5,4 +5,5 @@ def call(Map config){
 			sh 'echo Deploy done'
 		}
 	}
+	cucumber config
 }
