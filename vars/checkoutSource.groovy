@@ -1,9 +1,7 @@
 def call(Map config){
 	
 	stage("CHECKOUT"){
-		print "HI1"
-		print "HI2"
-
+		git url: "git@github.com:krushnatkhawale/cd-lib.git"
 	}
 
 }
