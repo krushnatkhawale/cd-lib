@@ -11,4 +11,6 @@ def call(Map config){
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
+
+	build config
 }
