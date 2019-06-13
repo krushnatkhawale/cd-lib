@@ -1,9 +1,9 @@
 
 
 def info(message){
-	echo "INFO: $message"
+	println "INFO: $message"
 }
 
 def warn(message){
-	echo("WARN: $message")
+	println "WARN: $message"
 }
