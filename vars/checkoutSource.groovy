@@ -1,5 +1,5 @@
 def call(Map config){
-	agent any
+
 	stage("CHECKOUT"){
 	
 		config.each{ 
