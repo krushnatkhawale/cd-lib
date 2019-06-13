@@ -1,16 +1,19 @@
 def call(Map config){
 
 	stage("CHECKOUT"){
-	
-		config.each{ 
-			log.info "$it.key  : $it.value" 
-		}
+		node{
 
-		env.each{ 
-			log.info "$it.key  : $it.value" 
-		}
+			config.each{ 
+				log.info "$it.key  : $it.value" 
+			}
 
-		git url: "git@github.com:krushnatkhawale/cd-lib.git"
+			env.each{ 
+				log.info "$it.key  : $it.value" 
+			}
+
+			git url: "git@github.com:krushnatkhawale/cd-lib.git"
+
+		}	
 	}
 
 }
