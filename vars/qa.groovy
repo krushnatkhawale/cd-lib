@@ -5,4 +5,5 @@ def call(Map config){
 			sh 'Cucumber will be added'
 		}
 	}
+	deployToPreProd config
 }
