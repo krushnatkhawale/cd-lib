@@ -1,7 +1,6 @@
 def call(Map config){
 
 	stage("CHECKOUT"){
-
 		node{
 
 			config.each{ 
@@ -11,6 +10,5 @@ def call(Map config){
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
-
 	build config
 }
