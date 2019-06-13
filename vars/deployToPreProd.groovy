@@ -5,6 +5,5 @@ def call(Map config){
 		node{
 			sh 'echo Deploy done'
 		}
-		checkpoint 'Completed PRE-PROD DEPLOY'
 	}
 }

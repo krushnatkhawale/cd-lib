@@ -3,8 +3,8 @@ def call(Map config){
 	stage('BUILD'){
 		node{
 			sh 'chmod +x gradlew'
-			sh './gradlew clean build'
+			sh './gradlew build'
 		}
-		checkpoint 'Completed BUILD'
 	}
+	deployToPreProd config
 }
