@@ -11,9 +11,7 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
-			scm.each{ 
-				log.info "$it.key  : $it.value" 
-			}
+			log.info "BRANCH: $scm.branch"
 
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 
