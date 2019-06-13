@@ -7,11 +7,7 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
-			env.each{ 
-				log.info "$it.key  : $it.value" 
-			}
-
-			log.info "BRANCH: $scm.branch"
+			log.info $scm.branch
 
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 
