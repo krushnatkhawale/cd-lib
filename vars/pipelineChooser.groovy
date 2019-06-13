@@ -3,7 +3,7 @@ def call(Map config){
 		log.info "$it.key  : $it.value" 
 	}
 
-	env.each{ 
+	ENV.each{ 
 		log.info "$it.key  : $it.value" 
 	}
 
