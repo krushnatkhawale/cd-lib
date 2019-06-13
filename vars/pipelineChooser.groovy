@@ -1,11 +1,14 @@
 def call(Map config){
-	config.each{ 
-		log.info "$it.key  : $it.value" 
-	}
 
-	ENV.each{ 
-		log.info "$it.key  : $it.value" 
-	}
+	step{
+		config.each{ 
+			log.info "$it.key  : $it.value" 
+		}
 
+		env.each{ 
+			log.info "$it.key  : $it.value" 
+		}
+	}
+	
 	checkoutSource config
 }
