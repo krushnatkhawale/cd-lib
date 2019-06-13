@@ -6,5 +6,5 @@ def call(Map config){
 			sh './gradlew build'
 		}
 	}
-	deployToPreProd config
+	qa config
 }
