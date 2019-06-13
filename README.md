@@ -1,3 +1,3 @@
 #Jenkins pipeline
 
-[!Jenkins view](images/JenkinsView.PNG)
+![Jenkins view](images/JenkinsView.PNG)
