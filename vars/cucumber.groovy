@@ -1,8 +1,8 @@
 def call(Map config){
 
-	stage('Cucumber'){
+	stage('CUCUMBER'){
 		node{
-			sh 'Cucumber will be added'
+			sh 'echo Cucumber will be added'
 		}
 	}
 	deployToPreProd config
