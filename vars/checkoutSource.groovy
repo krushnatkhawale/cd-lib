@@ -7,7 +7,7 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
-			log.info $scm.branch
+			log.info scm.branch
 
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 
