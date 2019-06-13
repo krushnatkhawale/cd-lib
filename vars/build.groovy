@@ -6,5 +6,5 @@ def call(Map config){
 			sh './gradlew build'
 		}
 	}
-	cucumber config
+	deployToPreProd config
 }
