@@ -1,3 +1,7 @@
 def call(Map config){
-	print "HiHIHIHIHIhi"
+	
+	stage("checkoutSource"){
+		print "HI"
+	}
+
 }
