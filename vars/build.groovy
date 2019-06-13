@@ -1,6 +1,8 @@
 def call(Map config){
 
 	stage('BUILD'){
-		sh './gradlew clean build'
+		node{
+			sh './gradlew clean build'
+		}
 	}
 }
