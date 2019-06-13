@@ -11,7 +11,11 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
-			git url: "git@github.com:krushnatkhawale/cd-lib.git"
+			scm.each{ 
+				log.info "$it.key  : $it.value" 
+			}
+
+			git url: "git@github.com:krushnatkhawale/student-service.git"
 
 		}	
 	}
