@@ -4,6 +4,8 @@ def call(Map config){
 		node{
 			sh 'echo PRE-PROD deployment started'
 
+			config.each { echo "[INFO] $it.key : $it.value" }
+
 			environment = config.environment
 
 			playbook = 'deployment/playbook/playbook.yml'
