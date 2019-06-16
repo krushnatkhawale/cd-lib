@@ -10,7 +10,7 @@ def call(Map config){
 			environment = config.environment
 
 			playbook = 'deployment/playbook/playbook.yml'
-			inventory = 'deployment/inventory/${environment}/inventory.yml'
+			inventory = 'deployment/inventory/pre-prod/inventory.yml'
 
 			ansiblePlaybook inventory: inventory, playbook: playbook
 		}
