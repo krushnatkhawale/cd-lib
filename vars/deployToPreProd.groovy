@@ -1,6 +1,5 @@
 def call(Map config){
 
-	config.each { echo "echo [INFO] MESSAGE :$it.key : $it.value" }
 	stage('PRE-PROD DEPLOY'){
 		node{
 			sh 'echo PRE-PROD deployment started'
@@ -10,7 +9,7 @@ def call(Map config){
 			environment = config.environment
 
 			playbook = 'deployment/playbook/playbook.yml'
-			inventory = 'deployment/inventory/pre-prod/inventory.yml'
+			inventory = "deployment/inventory/${environment}/inventory.yml"
 
 			ansiblePlaybook inventory: inventory, playbook: playbook
 		}
