@@ -1,6 +1,6 @@
 def call(Map config){
 
-	config.each { "echo [INFO] $it.key : $it.value" }
+	config.each { echo "echo [INFO] $it.key : $it.value" }
 	stage('PRE-PROD DEPLOY'){
 		node{
 			sh 'echo PRE-PROD deployment started'
