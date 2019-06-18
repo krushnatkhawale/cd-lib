@@ -6,6 +6,7 @@ def call(Map config){
 			playbook = 'deployment/playbook/playbook.yml'
 			inventory = "deployment/inventory/${config.environment}/inventory.yml"
 
+			ansiblePlaybook inventory: inventory, playbook: playbook --syntax-check
 			ansiblePlaybook inventory: inventory, playbook: playbook
 		}
 	}
