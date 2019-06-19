@@ -4,7 +4,7 @@ def call(Map config){
 		node{
 			sh 'chmod +x gradlew'
 			sh './gradlew assemble'
-			config.environment = 'pro-prod'
+			config.environment = 'dev'
 		}
 	}
 
