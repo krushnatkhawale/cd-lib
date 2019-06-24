@@ -3,7 +3,7 @@ def call(Map config){
 	stage('BUILD'){
 		node{
 			sh 'chmod +x gradlew'
-			sh './gradlew build'
+			sh './gradlew :app:build'
 			config.environment = 'dev'
 		}
 	}
