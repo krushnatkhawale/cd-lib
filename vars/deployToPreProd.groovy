@@ -7,7 +7,7 @@ def call(Map config){
 			inventory = "deployment/inventory/${config.environment}"
 
 			
-			ansiblePlaybook inventory: inventory, playbook: playbook
+			ansiblePlaybook inventory: inventory, playbook: playbook -vvvv
 		}
 	}
 	cucumber config
