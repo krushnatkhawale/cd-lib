@@ -10,7 +10,7 @@ def call(Map config){
 			}
 			echo 'Pulling...' + env.BRANCH_NAME
 			log.info '====================== env ======================='
-			env.each{ 
+			env.properties.each{ 
 				log.info "$it.key  : $it.value" 
 			}
 
