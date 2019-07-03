@@ -1,5 +1,6 @@
 def call(Map config){
 
+	sh 'printenv'
 	stage("CHECKOUT"){
 		node{
 
@@ -10,5 +11,6 @@ def call(Map config){
 			git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
+
 	build config
 }
