@@ -1,9 +1,10 @@
 def call(Map config){
 
-	sh 'printenv'
 	stage("CHECKOUT"){
 		node{
-
+			log.info '===================== printenv ======================'
+			sh 'printenv'
+			log.info '===================== config ======================'
 			config.each{ 
 				log.info "$it.key  : $it.value" 
 			}
