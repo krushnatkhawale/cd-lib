@@ -17,7 +17,9 @@ def call(Map config){
 
 			log.info '====================== SCM ======================='
 			log.info scm
-			log.info scm.userRemoteConfigs.class
+			scm.userRemoteConfigs.each{
+				log.info "confs: " it
+			}
 			//git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
