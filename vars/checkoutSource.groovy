@@ -17,7 +17,7 @@ def call(Map config){
 
 			log.info '====================== SCM ======================='
 			log.info scm
-			log.info "size: " scm.userRemoteConfigs.size()
+			log.info "size: " + scm.userRemoteConfigs.size()
 			scm.userRemoteConfigs.each{
 				log.info "confs: " it
 			}
