@@ -15,7 +15,7 @@ def call(Map config){
 			}
 
 			log.info '====================== CHECKING OUT ======================='
-			git url: "git@github.com:krushnatkhawale/student-service.git"
+			//git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
 
