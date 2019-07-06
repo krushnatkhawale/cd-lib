@@ -14,7 +14,9 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
-			log.info '====================== CHECKING OUT ======================='
+
+			log.info '====================== SCM ======================='
+			log.info scm
 			//git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
