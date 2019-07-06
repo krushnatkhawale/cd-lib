@@ -14,12 +14,11 @@ def call(Map config){
 				log.info "$it.key  : $it.value" 
 			}
 
+			log.info '====================== CHECKOUT ======================='
+			def repositoryToCheckout = scm.userRemoteConfigs[0].getUrl()
 
-			log.info '====================== SCM ======================='
-			log.info scm
-			log.info "REPO: " + scm.userRemoteConfigs[0].getUrl()
+			git url: repositoryToCheckout
 			}
-			//git url: "git@github.com:krushnatkhawale/student-service.git"
 		}	
 	}
 
