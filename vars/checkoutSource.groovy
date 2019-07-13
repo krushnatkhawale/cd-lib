@@ -12,7 +12,7 @@ def call(Map config){
 
 			log.info "CHECKING OUT1: $repositoryToCheckout, branch: $config.BRANCH_NAME"
 			log.info "CHECKING OUT2: $repositoryToCheckout, branch: $env.BRANCH_NAME"
-			git url: repositoryToCheckout version: env.BRANCH_NAME
+			git url: repositoryToCheckout branch: env.BRANCH_NAME
 		}
 	}
 	build config
