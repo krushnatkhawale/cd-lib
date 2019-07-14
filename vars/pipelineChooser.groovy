@@ -1,10 +1,9 @@
 def call(Map config){
 
 
-	println "Branch: $env.BRNACH_NAME"
-	print "PIPELINE TYPE: " 
-	print 
+	println "Test****************"
 	log.info env.getProperties().toString()
-	checkoutSource config
+	println "Finish****************
+	//checkoutSource config
 
 }
