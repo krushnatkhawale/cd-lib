@@ -1,6 +1,6 @@
 def call(Map config){
 
-	log.info "Executing pipeline type PRE-PROD"
+	log.info "Pipeline triggered from branch '$config.branchName', type PRE-PROD"
 			
 	//checkoutSource config
 }
