@@ -4,5 +4,5 @@ def call(Map config){
 			
 	checkoutSource config
 
-	currentBuild.status = "SUCCESS"
+	currentBuild.result = "SUCCESS"
 }
