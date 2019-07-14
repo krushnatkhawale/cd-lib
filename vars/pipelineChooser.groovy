@@ -5,7 +5,7 @@ def call(Map config){
 	
 	switch(branchName) {
 		case ~/^master.*/:
-		log.info "Executing pipeline type -PRE-PROD"
+		log.info "Executing pipeline type PRE-PROD"
 			
 		break
 		case ~/^develop.*/:
@@ -17,13 +17,10 @@ def call(Map config){
 			
 		break
 		default:
+		log.info "Branching naming convention isn't followed, please use valid name"
 			
 		break
 	}
 
-	println "Test****************"
-	print env.getProperties().environment.BRANCH_NAME
-	println "Finish****************"
 	//checkoutSource config
-
 }
