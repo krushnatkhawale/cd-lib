@@ -8,7 +8,7 @@ def call(Map config){
 
 
 			sh 'echo Cucumber will be added'
-			sh "./gradlew :qa:build -PtestEnvironment=" + config.branchName
+			sh "./gradlew :qa:build -PtestEnvironment=" + config.environment
 		}
 	}
 }
