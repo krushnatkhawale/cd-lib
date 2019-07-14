@@ -3,7 +3,7 @@ def call(Map config){
 
 	println "Test****************"
 	log.info env.getProperties().toString()
-	println "Finish****************
+	println "Finish****************"
 	//checkoutSource config
 
 }
