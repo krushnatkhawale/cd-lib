@@ -2,7 +2,7 @@ def call(Map config){
 
 
 	println "Test****************"
-	 env.getProperties().each{ print it.key }
+	print env.getProperties().environment
 	println "Finish****************"
 	//checkoutSource config
 
