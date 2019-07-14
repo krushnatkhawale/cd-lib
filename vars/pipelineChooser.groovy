@@ -1,11 +1,8 @@
 def call(Map config){
 
-	def branchName = env.getProperties().environment.BRANCH_NAME
-	log.info "Pipeline triggered for branch '$branchName'"
-
-	config.branchName = branchName
-
-	switch(branchName) {
+	config.branchName = env.getProperties().environment.BRANCH_NAME
+	
+	switch(config.branchName) {
 		case ~/^master.*/:  runPreProdPipeline config
 							break
 
@@ -14,10 +11,7 @@ def call(Map config){
 
 		case ~/^feature.*/: runPreProdPipeline config
 							break
-		default: log.info "Branching naming convention isn't followed, please use valid name"
-				 currentBuild.result = "ERROR"
+		default: 			failPipeline config
 							break
 	}
-
-	//checkoutSource config
 }
