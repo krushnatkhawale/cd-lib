@@ -1,13 +1,9 @@
 def call(Map config){
 
 
-	getBranchName
+	println "Branch: $env.BRNACH_NAME"
+	print "PIPELINE TYPE: " 
 
 	checkoutSource config
 
-}
-
-def getBranchName(){
-	println "Branch: $env.BRNACH_NAME"
-	print "PIPELINE TYPE: " 
 }
