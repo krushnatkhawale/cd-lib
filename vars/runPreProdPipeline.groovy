@@ -8,18 +8,3 @@ def call(Map config){
 
 	currentBuild.result = "SUCCESS"
 }
-
-def getEnvironmentFor(Map config){
-	switch(config.branchName) {
-		case ~/^master.*/:  "dev"
-							break
-
-		case ~/^develop.*/: "prod"
-							break
-
-		case ~/^feature.*/: "dev"
-							break
-		default: 			failPipeline config
-							break
-	}
-}
