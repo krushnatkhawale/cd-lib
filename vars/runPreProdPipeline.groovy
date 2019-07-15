@@ -10,21 +10,16 @@ def call(Map config){
 }
 
 def getEnvironmentFor(Map config){
-	def call(Map config){
-
-	config.branchName = env.getProperties().environment.BRANCH_NAME
-	
 	switch(config.branchName) {
-		case ~/^master.*/:  runPreProdPipeline config
+		case ~/^master.*/:  "dev"
 							break
 
-		case ~/^develop.*/: runProdPipeline config
+		case ~/^develop.*/: "prod"
 							break
 
-		case ~/^feature.*/: runPreProdPipeline config
+		case ~/^feature.*/: "dev"
 							break
 		default: 			failPipeline config
 							break
 	}
-}
 }
