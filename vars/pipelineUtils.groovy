@@ -1,5 +1,6 @@
 def getEnvironmentFor(Map config){
 
+	log.info "BranchName: $config.branchName"
 	switch(config.branchName) {
 
 		case ~/^master.*/:  
