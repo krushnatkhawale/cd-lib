@@ -5,12 +5,10 @@ def getEnvironmentFor(Map config){
 
 		case ~/^master.*/:  
 		case ~/^feature.*/: 
-							"dev"
-							break
+							return "dev"
 
 		case ~/^develop.*/: 
-							"prod"
-							break
+							return "prod"
 
 		default: 			failPipeline config
 	}
