@@ -2,7 +2,7 @@ def call(Map config){
 
 
 
-	stage('DEPLOY TO ${config.environment}'){
+	stage("DEPLOY TO ${config.environment}"){
 		node{
 
 			playbook = 'deployment/playbook/playbook.yml'
