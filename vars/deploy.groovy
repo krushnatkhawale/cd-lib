@@ -2,7 +2,7 @@ def call(Map config){
 
 
 
-	stage("DEPLOY TO ${config.environment.toUpperCase}"){
+	stage("DEPLOY TO ${config.environment.toUpperCase()}"){
 		node{
 
 			playbook = 'deployment/playbook/playbook.yml'
