@@ -4,7 +4,7 @@ def call(Map config){
 		node{
 
 			sh 'chmod +x gradlew'
-			sh './gradlew :app:build'
+			sh './gradlew :app:build --rerun-tasks'
 		}
 	}
 
