@@ -11,6 +11,14 @@ def call(Map config){
 		}
 	}
 
+	stage('BUILD'){
+		node{
+
+			build config
+		}
+	}
+
+
 
 	currentBuild.result = "SUCCESS"
 }
