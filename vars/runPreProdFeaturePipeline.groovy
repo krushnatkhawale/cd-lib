@@ -18,7 +18,19 @@ def call(Map config){
 		}
 	}
 
+	stage("DEPLOY TO ${config.environment.toUpperCase()}"){
+		node{
 
+			deploy config
+		}
+	}
+
+	stage('CUCUMBER'){
+		node{
+
+			cucumber config
+		}
+	}
 
 	currentBuild.result = "SUCCESS"
 }
