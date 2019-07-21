@@ -31,6 +31,4 @@ def call(Map config){
 			cucumber config
 		}
 	}
-
-	currentBuild.result = "SUCCESS"
 }
