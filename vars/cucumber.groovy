@@ -1,5 +1,9 @@
 def call(Map config){
 
-	sh "./gradlew :qa:build --rerun-tasks -PtestEnvironment=" + config.environment
+	stage('CUCUMBER'){
+		node{
 
+			sh "./gradlew :qa:build --rerun-tasks -PtestEnvironment=" + config.environment
+		}
+	}
 }

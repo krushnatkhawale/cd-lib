@@ -4,11 +4,12 @@ def getEnvironmentFor(Map config){
 	
 	switch(config.branchName) {
 
-		case ~/^master.*/:  return "prod";
+		case ~/^master.*/:  
+		case ~/^feature.*/: 
+							return "dev"
 
-		case ~/^feature.*/: return "dev"
-
-		case ~/^develop.*/: return "dev"
+		case ~/^develop.*/: 
+							return "prod"
 
 		default: 			failPipeline config
 	}
