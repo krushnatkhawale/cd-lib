@@ -4,7 +4,7 @@ def call(Map config){
 	
 	switch(config.branchName) {
 
-		case ~/^master.*/:  runPreProdPipeline config
+		case ~/^master.*/:  runProdPipeline config
 							break
 
 		case ~/^develop.*/: runPreProdDevelopPipeline config

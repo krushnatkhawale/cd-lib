@@ -4,7 +4,26 @@ def call(Map config){
 	
 	config.environment = pipelineUtils.getEnvironmentFor config
 
-	checkoutSource config
+	stage("CHECKOUT"){
+		node{
+
+			checkoutSource config			
+		}
+	}
+
+	stage('BUILD'){
+		node{
+
+			build config
+		}
+	}
+
+	stage("DEPLOY TO ${config.environment.toUpperCase()}"){
+		node{
+
+			deploy config
+		}
+	}
 
 	currentBuild.result = "SUCCESS"
 }
