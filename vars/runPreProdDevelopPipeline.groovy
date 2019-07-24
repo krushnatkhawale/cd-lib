@@ -29,7 +29,7 @@ def call(Map config){
 	stage('PERFORMANCE TESTS'){
 		node{
 
-			//cucumber config
+			performanceTest config
 		}
 	}
 }
