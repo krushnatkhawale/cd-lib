@@ -9,5 +9,5 @@
 ## Develop branch pipeline
 ![Jenkins view](images/develop-branch-flow.PNG)
 
-## Master branch pipeline
+## master-branch-flow branch pipeline
 ![Jenkins view](images/master-branch-flow.PNG)
