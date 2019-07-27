@@ -1,6 +1,6 @@
 def call(Map config){
 
-	log.info "Pipeline triggered from branch '$config.branchName', type PRE-PROD"
+	log.info "Pipeline triggered for branch '$config.branchName', type PRE-PROD"
 
 	config.environment = pipelineUtils.getEnvironmentFor config
 			
