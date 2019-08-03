@@ -18,7 +18,7 @@ def call(Map config){
 		}
 	}
 
-	stage("DEPLOY TO ${config.environment.toUpperCase()}"){
+	stage("${config.environment.toUpperCase()} DEPLOYMENT"){
 		node{
 
 			deploy config
